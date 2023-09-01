@@ -10,12 +10,12 @@ let valueInNumber = Number(score)
 let isLoggedIn = 1
 
 let booleanIsLoggedIn = Boolean(isLoggedIn)
-console.log(booleanIsLoggedIn)
+// console.log(booleanIsLoggedIn)
 
 let someNumber = 10
 
 let someString = String(someNumber)
-console.log(someString)
+// console.log(someString)
 
 /* 
 Basic Conversions:
@@ -26,3 +26,37 @@ Basic Conversions:
     "" -> false 
     "mihir" -> true
 */
+
+
+// ***************** Operaions ***********
+
+let value = 3
+let negValue = -value
+// console.log(negValue);
+
+/*
+
+console.log(2+2);
+console.log(2-2);
+console.log(2*2);
+console.log(2**2);
+console.log(2/2);
+console.log(2%2);
+
+
+
+console.log("1" + 2 + 2)
+console.log(1 + 2 + "2")
+
+console.log(+true);
+console.log(+"");
+
+*/
+
+let num1, num2, num3
+num1 = num2 = num3 = 2
+
+
+// Prefix and Postfix
+// num1++
+// ++num1
