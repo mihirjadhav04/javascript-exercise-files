@@ -28,3 +28,36 @@ const myFunction = function(){
 }
 
 console.log(typeof id);
+
+
+
+//++++++++++++++++++++++++++++++++ MEMORY +++++++++++++++++
+
+// STACK (Primitive) : Here you get the copy of the value.
+// &
+// HEAP (Non-Primitive) : Here you get the reference of the actual value.
+
+
+let myYoutubeName = "Mihir Jadhav"
+let anotherName = myYoutubeName
+
+
+anotherName = "Muitaristic"
+
+console.log(myYoutubeName)
+console.log(anotherName)
+
+
+let userOne = {
+    email : "jadhavmihir@gmail.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne
+
+console.log(userOne);
+console.log(userTwo);
+
+userTwo.email = "bhavin@gmail.com"
+console.log(userOne);
+console.log(userTwo);
