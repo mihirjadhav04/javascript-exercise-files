@@ -53,11 +53,32 @@ const users = [
 
 // console.log(obj3)
 
-console.log(tinderUser)
-console.log(Object.keys(tinderUser)) //extract all the keys of the object and store it in the form of array.
-console.log(Object.entries(tinderUser)) //extract all the [key , value] and store it in the array format of individual arrays.
+// console.log(tinderUser)
+// console.log(Object.keys(tinderUser)) //extract all the keys of the object and store it in the form of array.
+// console.log(Object.entries(tinderUser)) //extract all the [key , value] and store it in the array format of individual arrays.
 
 
 
-console.log(tinderUser.hasOwnProperty('isLoggedIn'))
+// console.log(tinderUser.hasOwnProperty('isLoggedIn'))
+
+
+
+// ******************* De-Structuring of Objects ***********************
+
+
+
+const course = {
+    courseName: "Stock Market",
+    price: "999",
+    duration: "2 Months",
+    courseInstructor: "Mihir Jadhav"
+}
+
+// 1 Method to access the value to destructure
+console.log(course.courseInstructor);
+
+
+//2 Method to access the value and destructure
+const {courseInstructor: instructor} = course
+console.log(instructor)
 
