@@ -1,8 +1,8 @@
-// 1. singleton created from constructor - Object.create()
+// 1. singleton object: it gets created when done from constructor - Object.create()
 
-// 2. object literals
+// 2. object literals: here it's not singleton.
 
-const mySym = Symbol("Key1")
+const mySym = Symbol("key1");
 
 // objects works with KEY:VALUE
 const js_user = {
@@ -15,7 +15,7 @@ const js_user = {
     isLoggedIn: false,
     lastLoginDays: ["Monday", "Saturday"],
 
-    [mySym]: "mySymb1" // to use as symbol use []
+    [mySym] : "mykey1" // to use as symbol use []
 }
 
 //Accessing ways to objects.
@@ -25,11 +25,11 @@ console.log(js_user["full name"]); // here you can't use . operator to access th
 
 
 console.log(js_user[mySym]);
-console.log(typeof js_user[mySym]); 
+console.log(`Type of Symbol:`, typeof js_user[mySym] ); 
 
 
 js_user.email = "bhavin@gmail.com"
-// Object.freeze(js_user) // to freeze the object
+// Object.freeze(js_user) // to freeze the object so no one can do the changes to the object.
 
 
 // console.log(js_user);
@@ -42,7 +42,7 @@ js_user.greetingTwo = function(){
     console.log(`Hello, ${this["full name"]}!`);
 }
 
-console.log(js_user.greeting);
+console.log(js_user.greeting());
 console.log(js_user.greetingTwo());
 
 
