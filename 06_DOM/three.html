@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Node List</title>
+</head>
+<body style="background-color: #212121; color: #fff">
+    
+</body>
+<script>
+// how to create an element and assign attributes.
+
+    const div = document.createElement('div')
+    div.className = "main"
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute("title","generated title")
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+    console.log(div);
+    // first way : div.innerText = "Mihir Jadhav"
+    //second way: created a text node and then appended it to div.
+    const addText = document.createTextNode("Mihir Jadhav")
+    div.appendChild(addText)
+
+
+    document.body.appendChild(div) // append the div child in the body.
+    
+    //further you can create a wrapper function and use above code to create a div.
+
+</script>
+</html>
