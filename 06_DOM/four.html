@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Edit / Remove Elements.</title>
+</head>
+<body style="background-color: #212121; color: #fff; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+    <ul class="junk-food">
+        <li>Pizza</li>
+    </ul>
+</body>
+<script>
+    //Basic Way! - Here treaversing is done in the tree. Hence, not much optimized!
+    function addFood(foodName){
+       const li = document.createElement('li')
+       li.innerHTML = `${foodName}`
+       document.querySelector(".junk-food").appendChild(li)
+       console.log(li); 
+    }
+    addFood("Burger")
+    addFood("Frankie")
+
+    function addOptimizeFood(foodName){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(foodName))
+        document.querySelector(".junk-food").appendChild(li)
+    }
+
+    addOptimizeFood("French-Fries")
+
+    // Edit - change the element content. 
+    const secondFoodType = document.querySelector("li:nth-child(2)")
+    const newli = document.createElement("li")
+    newli.textContent = "Sandwich"
+    secondFoodType.replaceWith(newli)
+
+
+    const firstFoodType = document.querySelector("li:first-child")
+    firstFoodType.outerHTML = "<li>Momos</li>"
+
+
+    //remove 
+    const lastFoodType = document.querySelector("li:last-child")
+    lastFoodType.remove()
+</script>
+</html>
