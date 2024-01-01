@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Mihir Jadhav</h1>
+    <button type="button" id="stop">Click Me!</button>
+</body>
+
+<script>
+
+    const sayMihir = function(){
+        console.log("Hello, Mihir!");
+    }
+    const changeText = function(){
+        document.querySelector("h1").innerHTML = "Best JS Series!"
+    }
+
+    //taking time to execute a function only once.
+    const changeMe = setTimeout(changeText, 2000)
+
+    // clearTimeout()
+    document.querySelector("#stop").addEventListener("click", function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED!")
+    })
+
+    //setInterval() - here it takes certain ammount of time and executes on the interval time period.
+
+
+</script>
+</html>
