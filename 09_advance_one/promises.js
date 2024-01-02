@@ -128,6 +128,9 @@ promiseFour
 
 // getAllUsers()
 
+// xhr-request() --> requests() --> fetch()  
+
+
 fetch("https://randomuser.me/api/")
 .then((response) => {
     return response.json()
